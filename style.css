@@ -1,0 +1,140 @@
+:root {
+    /* Primary */
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 60px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+
+    display: flex;
+    align-items: center;
+    flex-flow:column wrap;
+}
+
+h1, h2, p {
+    margin: 0px; 
+}
+
+h1 {
+    text-align: center;
+    line-height: 40px;
+    font-weight: 200;
+    color: var(--very-dark-blue);
+}
+
+h2 {
+    color:hsl(234, 12%, 34%);
+}
+
+.title-bold {
+    font-weight: 600;
+}
+
+p {
+    max-width: 450px;
+    text-align: center;
+    line-height: 25px;
+    color: var(--grayish-blue);
+    margin: 30px 0px;
+}
+
+.cards {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1300px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 8px;
+    max-width: 325px;
+    box-shadow: 0px 5px 12px rgb(201, 208, 228) ;
+    
+    display: flex;
+    flex-flow: column wrap;
+    gap: 15px;
+}
+
+.card p, h2 {
+    text-align: left;
+    margin: 0px;
+}
+
+.card img {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.vermelho {
+    border-top: 5px solid var(--primary-red);
+}
+
+.laranja {
+    border-top: 5px solid var(--primary-orange);
+}
+
+.ciano {
+    border-top: 5px solid var(--primary-cyan);
+}
+
+.azul {
+    border-top: 5px solid var(--primary-blue);
+}
+
+.item1, .item3{
+    display: flex;
+    align-items: center;
+}
+
+.item2 {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1115px) {
+    .cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 415px) {
+    h1 {
+        font-size: 1.6em;
+        line-height: 30px;
+    }
+    p {
+        margin: 20px 0px;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    .card p{
+        font-size: 14px;
+    }
+    .card {
+        gap: 8px;
+        padding: 20px;
+        max-width: 310px;
+    }
+}
